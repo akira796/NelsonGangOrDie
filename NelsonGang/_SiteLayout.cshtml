@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-83806060-10"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-83806060-10');
+    </script>
+    <meta charset="utf-8" />
+    <title>@Page.Title - Nelson Gang</title>
+    <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.10.3.js"></script>
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="The offical site of Nelson Gang" />
+    <meta name="keywords" content="Music, LA, Rap, Rapper, Artist, Concert, SWAG, Shows, Videos, Music Videos, Up and Coming, Nelson, Nelson Gang, Nel$on, Nel$on Gang" />
+    <meta name="author" content="AkiraWebSolutions.com" />
+</head>
+    <body>
+        <div class="homeBody">
+            <a href="http://nelsongang.bigcartel.com/"><img src="~/Images/Nelson-Hoodie-Gif.gif" width="20%" /></a>
+        </div>
+        <div class="menu">
+            <table align="center">
+                <tr>
+                    <td>
+                        <a class="foo" href="Default">
+                            <img src="~/Images/home.png" width="20%" max-height="115px" />
+                            <img src="~/Images/homeHover.png" width="20%" max-height="115px" />
+                        </a>
+
+
+                        <a class="foo" href="video">
+                            <img src="~/Images/video.png" width="25%" max-height="115px" />
+                            <img src="~/Images/videoHover.png" width="25%" max-height="115px" />
+                        </a>
+
+
+                        <a class="foo" href="music">
+                            <img src="~/Images/music.png" width="22%" max-height="115px" />
+                            <img src="~/Images/musicHover.png" width="22%" max-height="115px" />
+                        </a>
+
+
+                        <a class="foo" href="shows">
+                            <img src="~/Images/shows.png" width="22%" max-height="115px" />
+                            <img src="~/Images/showsHover.png" width="22%" max-height="115px" />
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        @*<header>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p class="site-title"><a href="~/">your logo here</a></p>
+                </div>
+                <div class="float-right">
+                    <section id="login">
+                        @if (WebSecurity.IsAuthenticated) {
+                            <text>
+                                Hello, <a class="email" href="~/Account/Manage" title="Manage">@WebSecurity.CurrentUserName</a>!
+                                <form id="logoutForm" action="~/Account/Logout" method="post">
+                                    @AntiForgery.GetHtml()
+                                    <a href="javascript:document.getElementById('logoutForm').submit()">Log out</a>
+                                </form>
+                            </text>
+                        } else {
+                            <ul>
+                                <li><a href="~/Account/Register">Register</a></li>
+                                <li><a href="~/Account/Login">Log in</a></li>
+                            </ul>
+                        }
+                    </section>
+                    <nav>
+                        <ul id="menu">
+                            <li><a href="~/">Home</a></li>
+                            <li><a href="~/About">About</a></li>
+                            <li><a href="~/Contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>*@
+        <div id="body">
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+                <div class="socialmedia">
+                    <table align="center">
+                        <tr>
+
+                            <td>
+                                <a href="https://twitter.com/nelsongangXO">
+                                    <img src="~/Images/twitter.png" width="10%" />
+                                </a>
+
+                                <a href="https://www.instagram.com/nelsongangxo/">
+                                    <img src="~/Images/instagram.png" width="10%" />
+                                </a>
+
+                                <a href="https://www.youtube.com/channel/UCpPCrj7g_3mWXBHsDinER9A">
+                                    <img src="~/Images/YouTube.png" width="10%" />
+                                </a>
+
+                                <a href="https://soundcloud.com/nelsongang">
+                                    <img src="~/Images/SoundCloud.png" width="10%" />
+                                </a>
+
+                                <a href="https://www.snapchat.com/add/jakenelson1st">
+                                    <img src="~/Images/snapchat.png" width="10%" />
+                                </a>
+
+                                <a href="https://itunes.apple.com/us/artist/nelsongang/1315504612">
+                                    <img src="~/Images/itunes.png" width="10%" />
+                                </a>
+                                <a href="https://distrokid.com/hyperfollow/nelsongang/dvXG">
+                                    <img src="~/Images/Spotify.png" width="10%" />
+                                </a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
+        </div>
+        <footer>
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - Nel$on Gang</p>
+                </div>
+                <div class="float-right">
+                    <p style="color:white">Design by <a href="https://www.akirawebsolutions.com" style="color:white">AkiraWebSolutions.com</a></p>
+                </div>
+            </div>
+        </footer>
+        @RenderSection("Scripts", required: false)
+    </body>
+</html>
+
+<style>
+    .foo img:last-child {
+        display: none;
+    }
+
+    .foo:hover img:first-child {
+        display: none;
+    }
+
+    .foo:hover img:last-child {
+        display: inline-block;
+    }
+    body {
+        background-color: black;
+        text-align: center;
+    }
+    #body {
+        background-color: black;
+        text-align: center;
+    }
+
+    .socialmedia {
+        text-align: center;
+    }
+
+    menu {
+        text-align: center;
+    }
+
+</style>
